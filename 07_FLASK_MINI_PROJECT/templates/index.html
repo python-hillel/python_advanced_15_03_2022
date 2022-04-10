@@ -1,0 +1,20 @@
+{# <!DOCTYPE html> #}
+{# <html lang="en"> #}
+{# <head> #}
+{#    <meta charset="UTF-8"> #}
+{#    <title>Flask Mini Project</title> #}
+{#    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}"> #}
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> #}
+{# </head> #}
+{# <body> #}
+{#    <h1>Welcome to Flask!</h1> #}
+{# </body> #}
+{# </html> #}
+
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Flask!</h1>
+{% endblock %}
