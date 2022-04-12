@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}List of books{% endblock %}
+
+{% block content %}
+    <h1>Welcome to Flask Library</h1>
+    {% for book in books %}
+        <a href="{{ url_for('detail_book', book_id=book['id']) }}">
+            <h3>{{ book['title'] }}</h3>
+        </a>
+        <span class="badge bg-primary">{{ book['created'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}

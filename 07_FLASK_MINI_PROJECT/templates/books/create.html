@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Create a book{% endblock %}
+
+{% block content %}
+<h1>Create new book</h1>
+
+<form method="post">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input name="title" type="text" class="form-control" id="title" value="{{ request.form['title'] }}">
+  </div>
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input name="author" type="text" class="form-control" id="author" value="{{ request.form['author'] }}">
+  </div>
+  <button type="submit" class="btn btn-primary">Create</button>
+</form>
+{% endblock %}

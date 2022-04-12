@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit: "{{ book['title'] }}" {% endblock %}
+
+{% block content %}
+<h1>Edit book: "{{ book['title'] }}"</h1>
+
+<form method="post">
+  <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input name="title" type="text" class="form-control" id="title"
+           value="{{ request.form['title'] or book['title'] }}">
+  </div>
+  <div class="mb-3">
+    <label for="author" class="form-label">Author</label>
+    <input name="author" type="text" class="form-control" id="author"
+           value="{{ request.form['author'] or book['author'] }}">
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
+<hr>
+<form action="{{ url_for('delete_book', book_id=book['id']) }}" method="POST">
+    <input type="submit" value="Delete Book"
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Are you sure you want to delete this book?')">
+</form>
+{% endblock %}

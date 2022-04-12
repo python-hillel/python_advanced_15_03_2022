@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}Book: {{ book['title'] }}{% endblock %}
+
+{% block content %}
+    <h3>{{ book['title'] }}</h3>
+    <span class="badge bg-secondary">{{ book['created'] }}</span>
+    <p>Author: {{ book['author'] }}</p>
+    <div class="d-grid gap-2 d-md-block">
+        <a href="{{ url_for('list_books') }}" class="btn btn-primary">Back to List</a>
+        <a href="{{ url_for('update_book', book_id=book['id']) }}" class="btn btn-primary">Edit</a>
+    </div>
+{% endblock %}
