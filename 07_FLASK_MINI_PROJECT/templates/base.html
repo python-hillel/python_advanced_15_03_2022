@@ -13,24 +13,30 @@
 <body>
 <div class="container">
     <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Flask Library</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
-                        Books
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ url_for('list_books') }}">List books</a></li>
-                        <li><a class="dropdown-item" href="{{ url_for('create_book') }}">Create book</a></li>
-                    </ul>
-                </li>
-            </ul>
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Flask Library</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            Books
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ url_for('list_books') }}">List books</a></li>
+                            <li><a class="dropdown-item" href="{{ url_for('create_book') }}">Create book</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" method="get" action="{{ url_for('search_book') }}?value=name">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="value">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
         </div>
     </nav>
     {% block content %} {% endblock %}

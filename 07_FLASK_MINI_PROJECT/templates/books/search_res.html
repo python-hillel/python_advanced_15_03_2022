@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Search result{% endblock %}
+
+{% block content %}
+    <h1>Search result</h1>
+    {% for book in books %}
+        <a href="{{ url_for('detail_book', book_id=book['id']) }}">
+            <h2>{{ book['author'] }} - {{ book['title'] }}</h2>
+        </a>
+        <span class="badge bg-primary">{{ book['created'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
