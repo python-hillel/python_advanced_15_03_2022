@@ -2,9 +2,9 @@ import sqlite3
 
 from faker import Faker
 
-from variables import URL
+from variables import DB_NAME
 
-connection = sqlite3.connect(URL)
+connection = sqlite3.connect(DB_NAME)
 
 with open('schema.sql') as file:
     connection.executescript(file.read())

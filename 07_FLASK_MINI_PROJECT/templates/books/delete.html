@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Delete book: {{ book.title }}
+{% endblock %}
+
+{% block content %}
+    <h2>Are you sure you want to delete {{ book.title }}?</h2>
+    <form method='post'>
+      <a href="{{ url_for('list_books') }}" class="btn btn-primary">Back to List</a>
+      <button class="btn btn-danger" type="submit">Remove</button>
+    </form>
+{% endblock %}

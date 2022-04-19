@@ -9,5 +9,6 @@
     <div class="d-grid gap-2 d-md-block">
         <a href="{{ url_for('list_books') }}" class="btn btn-primary">Back to List</a>
         <a href="{{ url_for('update_book', book_id=book['id']) }}" class="btn btn-primary">Edit</a>
+        <a href="{{ url_for('delete_book', book_id=book['id']) }}" class="btn btn-danger">Delete</a>
     </div>
 {% endblock %}
