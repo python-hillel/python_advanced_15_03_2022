@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Home :: Comments</title>
+    </head>
+    <body>
+        <h1>Комментарии:</h1>
+        {% for comment in comments %}
+        <div>
+            <h2>{{ comment.title }}</h2>
+            <p>{{ comment.content }}</p>
+            <p>{{ comment.published|date:"d.m.Y H:i:s" }}</p>
+        </div>
+        <hr>
+        {% endfor %}
+    </body>
+</html>
