@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}User profile{% endblock %}
+
+{% block content %}
+    <div>
+        <div class="col-md-4">
+              <img src="{{ user.profile.avatar.url }}" class="rounded-circle p-3" width="200" height="200" alt="avatar">
+        </div>
+        <div class="p-3 m-3">
+            <h2 class="account-heading">{{ user.first_name }} {{ user.last_name }}</h2>
+            <p class="text-secondary">{{ user.email }}</p>
+        </div>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><span class="h5">Username:</span> {{ user.username }}</li>
+        <li class="list-group-item">
+            <span class="h5">Birthday: </span>
+            {% if user.profile.birthday %}{{ user.profile.birthday }}{% endif %}
+        </li>
+        <li class="list-group-item">
+            <span class="h5">City: </span>
+            {% if user.profile.city %}{{ user.profile.city }}{% endif %}
+        </li>
+    </ul>
+    <div class="mt-3">
+        <a class="btn btn-success" href="{% url 'accounts:profile_update' %}">Change profile</a>
+        <a class="btn btn-danger" href="{% url 'password_change' %}">Change password</a>
+    </div>
+{% endblock %}

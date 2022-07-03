@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Delete group{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        <p>Do you really want to remove
+            <span style="font-style: italic; font-weight: bold;">
+                {{ object.name }}
+            </span>?
+        </p>
+        <div class="mt-2">
+            <input class="btn btn-outline-danger" type="submit" value="Agree">
+            <a class="btn btn-outline-primary" href="{% url 'groups:list' %}">Cancel</a>
+        </div>
+    </form>
+{% endblock %}
