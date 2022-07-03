@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_filters %}
+
+{% block title %}
+    Вход на сайт
+{% endblock %}
+
+{% block header %}
+    Вход на сайт
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <p>
+            Если Вы забыли свой пароль, мы можем Вам помочь. Перейдите по
+            <a href="{% url 'password_reset' %}">ссылке</a> для сброса пароля.
+        </p>
+        <div>
+            <input class="btn btn-success mt-3" type="submit" value="Логин">
+            <a class="btn btn-success mt-3" href="{% url 'accounts:registration' %}">Регистрация</a>
+        </div>
+    </form>
+{% endblock %}

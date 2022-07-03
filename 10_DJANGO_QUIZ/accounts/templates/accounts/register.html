@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_filters %}
+
+{% block title %}
+    Регистрация нового пользователя
+{% endblock %}
+
+{% block header %}
+    Регистрация нового пользователя.
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+
+        <input class="btn btn-success mt-3" type="submit" value="Регистрация">
+        <a class="btn btn-success mt-3" href="{% url 'accounts:login' %}">Вход</a>
+    </form>
+{% endblock %}

@@ -1,0 +1,13 @@
+django-ckeditor>=6.4.2
+crispy-bootstrap5>=0.6
+Django>=4.0.5
+django-extensions>=3.1.5
+flake8>=4.0.1
+flake8-builtins>=1.5.3
+flake8-import-order>=0.18.1
+flake8-polyfill>=1.0.2
+ipython>=8.4.0
+pep8-naming>=0.13.0
+Pillow>=9.1.1
+psycopg2>=2.9.3
+python-dotenv>=0.20.0

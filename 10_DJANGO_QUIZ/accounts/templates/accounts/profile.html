@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    Профиль пользователя
+{% endblock %}
+
+{% block header %}
+    {{ user.username }} профиль.
+{% endblock %}
+
+{% block content %}
+    <div class="row mb-3">
+      <div class="col-sm-10">
+          <img class="rounded-circle p-1 m-1" width="200" height="200" src="{{ user.avatar.url }}" alt="avatar">
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="username" class="col-sm-2"><strong>Username:</strong></label>
+      <div class="col-sm-10">
+          <p id="username">{{ user.username }}</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="firstname" class="col-sm-2"><strong>Имя:</strong></label>
+      <div class="col-sm-10">
+          <p id="firstname">{{ user.first_name }}</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="lastname" class="col-sm-2"><strong>Фамилия:</strong></label>
+      <div class="col-sm-10">
+          <p id="lastname">{{ user.last_name }}</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="email" class="col-sm-2"><strong>E-Mail:</strong></label>
+      <div class="col-sm-10">
+          <p id="email">{{ user.email }}</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="birthday" class="col-sm-2"><strong>Дата рождения:</strong></label>
+      <div class="col-sm-10">
+          <p id="birthday">{{ user.birthday }}</p>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <label for="city" class="col-sm-2"><strong>Город:</strong></label>
+      <div class="col-sm-10">
+          <p id="city">{{ user.city }}</p>
+      </div>
+    </div>
+    <a class="btn btn-primary" href="{% url 'accounts:profile_change' %}">Изменить профиль</a>
+{% endblock %}

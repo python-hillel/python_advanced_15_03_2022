@@ -1,0 +1,44 @@
+{% load static %}
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg font-weight-bold" style="background-color: #e3f2fd;">
+  <div class="container">
+    <a class="navbar-brand" href="{% url 'index' %}">QUIZ</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" href="{% url 'quiz:list' %}">Exam list</a>
+          </li>
+<!--        <li class="nav-item"><a class="nav-link" href="/contacts/">Contacts</a></li>-->
+<!--        <li class="nav-item"><a class="nav-link" href="/about/">About Us</a></li>-->
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {% if user.is_authenticated %}
+              <img class="rounded-circle" width="30" height="30" src="{{ user.avatar.url }}" alt="avatar">
+              {{ user.username }}
+            {% else %}
+              <img class="rounded-circle" width="30" height="30" src="{% static 'accounts/default.png' %}" alt="avatar">
+              Account
+            {% endif %}
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+          {% if user.is_authenticated %}
+            <li><a class="dropdown-item" href="{% url 'accounts:logout' %}">Logout</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'accounts:profile' %}">Profile {{ user.username }}</a></li>
+            <li><a class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
+          {% else %}
+            <li><a class="dropdown-item" href="{% url 'accounts:login' %}">Login</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'accounts:registration' %}">Register</a></li>
+          {% endif %}
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
