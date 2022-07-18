@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_filters %}
+
+{% block title %}
+    Обновление профиля
+{% endblock %}
+
+{% block header %}
+    Обновление профиля
+{% endblock %}
+
+{% block content %}
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="media">
+            <div class="img-circle.vert">
+                <img class="rounded-circle p-1 m-1" width="200" height="200" src="{{ user.avatar.url }}" alt="avatar">
+            </div>
+            <div class="media-body p-3 m-3">
+                <h2 class="account-heading">{{ user.username }}</h2>
+                <h3 class="account-heading">{{ user.first_name }} {{ user.last_name }}</h3>
+                <p class="text-secondary">{{ user.email }}</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                {{ form.username|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.email|as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                {{ form.first_name|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.last_name|as_crispy_field }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                {{ form.birthday|as_crispy_field }}
+            </div>
+            <div class="col-6">
+                {{ form.city|as_crispy_field }}
+            </div>
+        </div>
+        {{ form.avatar|as_crispy_field }}
+
+        <input class="btn btn-success mt-3" type="submit" value="Сохранить">
+        <a class="btn btn-success mt-3" href="{% url 'accounts:profile' %}">Отменить</a>
+    </form>
+{% endblock %}

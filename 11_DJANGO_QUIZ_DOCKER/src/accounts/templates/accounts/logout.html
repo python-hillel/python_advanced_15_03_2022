@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Выход
+{% endblock %}
+
+{% block header %}
+    Вы успешно вышли с сайта.
+{% endblock %}
+
+{% block content %}
+    <a class="btn btn-success mt-3" href="{% url 'accounts:login' %}">Вход на сайт</a>
+{% endblock %}

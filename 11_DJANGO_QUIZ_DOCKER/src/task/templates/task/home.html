@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+    Django + Celery
+{% endblock %}
+
+{% block header %}
+    Django + Celery
+{% endblock %}
+
+{% block content %}
+<div class="column is-two-thirds">
+    <div>
+        <h2 class="title is-2">Tasks</h2>
+        <h3>Choose a task length:</h3>
+        <div class="field is-grouped">
+            <p class="control">
+                <button class="btn btn-primary" data-type="1">Short</button>
+                <button class="btn btn-primary" data-type="2">Medium</button>
+                <button class="btn btn-primary" data-type="3">Long</button>
+            </p>
+        </div>
+    </div>
+    <br><br>
+    <div>
+        <h2 class="title is-2">Task Status</h2>
+        <br>
+        <table class="table is-fullwidth">
+            <thead>
+                <tr class="text-primary">
+                    <th>ID</th>
+                    <th>Status</th>
+                    <th>Result</th>
+                    <th>DT</th>
+                </tr>
+            </thead>
+            <tbody id="tasks">
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="{% static 'main.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,98 @@
+version: "3.9"
+
+services:
+  web:
+    build: .
+    image: nkiseev/web_service:latest
+    container_name: web_service
+#    command: python manage.py runserver 0.0.0.0:8090
+    command: gunicorn app.wsgi:application --workers 4 --bind 0.0.0.0:8090
+    volumes:
+      - static_volume:/opt/src/static
+      - media_volume:/opt/src/media
+#    volumes:
+#      - ./src:/opt/src
+    ports:
+      - "8090:8090"
+    env_file:
+      - .env
+    depends_on:
+      - db
+
+  db:
+    image: postgres:12.0-alpine
+    container_name: db_service
+    volumes:
+      - db_data_volume:/var/lib/postgresql/data/
+    ports:
+      - "5438:5432"
+    env_file:
+      - .env
+
+  nginx:
+    build: ./nginx
+    image: nkiseev/nginx_service:latest
+    container_name: nginx_service
+    volumes:
+      - static_volume:/opt/src/static
+      - media_volume:/opt/src/media
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+
+  broker:
+    image: rabbitmq:3.9.12-alpine
+    container_name: broker_service
+    volumes:
+      - rabbit_volume:/var/lib/rabbitmq
+    ports:
+      - "5672:5672"
+    env_file:
+      - .env
+
+  backend:
+    image: redis:6.2.6-alpine
+    container_name: backend_service
+    volumes:
+      - redis_volume:/data
+    ports:
+      - "6379:6379"
+
+  worker: # celery
+    build: .
+    container_name: worker_service
+    command: sh -c "celery -A app worker --concurrency=20 --loglevel=info"
+    volumes:
+      - src_volume:/opt/src
+    env_file:
+      - .env
+    depends_on:
+      - broker
+      - backend
+
+  scheduler: # celery_beat - CRON
+    build: .
+    container_name: scheduler_service
+    command: sh -c "celery -A app beat -l info"
+    volumes:
+      - src_volume:/opt/src
+    env_file:
+      - .env
+    depends_on:
+      - backend
+      - broker
+
+volumes:
+  db_data_volume:
+    name: db_data
+  static_volume:
+    name: static_data
+  media_volume:
+    name: media_data
+  src_volume:
+    name: source_code
+  rabbit_volume:
+    name: rabbit_data
+  redis_volume:
+    name: redis_data

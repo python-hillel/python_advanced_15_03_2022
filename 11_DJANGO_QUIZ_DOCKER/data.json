@@ -1,0 +1,1286 @@
+[
+{
+  "model": "quiz.exam",
+  "pk": 1,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.994Z",
+    "update_timestamp": "2022-06-23T23:15:53.468Z",
+    "uuid": "01d81e98-9f00-4608-8ac8-8a8c36d18828",
+    "title": "Физика",
+    "description": "Интересные вопросы по физике:",
+    "level": 0
+  }
+},
+{
+  "model": "quiz.exam",
+  "pk": 2,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.829Z",
+    "update_timestamp": "2022-06-24T21:38:19.770Z",
+    "uuid": "d94bd6f9-1929-4149-ba11-7840cb5e00bc",
+    "title": "Астрономия",
+    "description": "Интересные вопросы по астрономии:",
+    "level": 0
+  }
+},
+{
+  "model": "quiz.exam",
+  "pk": 3,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.544Z",
+    "update_timestamp": "2022-06-24T21:37:55.544Z",
+    "uuid": "6f4a297a-28dd-43a3-b5b8-f0dd673915a0",
+    "title": "География",
+    "description": "Увлекательный тест по географии!",
+    "level": 0
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 1,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.995Z",
+    "update_timestamp": "2022-06-23T20:21:23.993Z",
+    "exam": 1,
+    "order_num": 1,
+    "text": "Кто изобрел первый ртутный термометр?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 2,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.996Z",
+    "update_timestamp": "2022-06-23T20:20:43.215Z",
+    "exam": 1,
+    "order_num": 2,
+    "text": "В какой части велосипеда использован винт с обратной резьбой?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 3,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.996Z",
+    "update_timestamp": "2022-06-23T20:19:40.708Z",
+    "exam": 1,
+    "order_num": 3,
+    "text": "Сколько изотопов водорода существует в природе на Земле?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 4,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.997Z",
+    "update_timestamp": "2022-06-23T20:18:49.602Z",
+    "exam": 1,
+    "order_num": 4,
+    "text": "Какая температура кипения воды на вершине горы Эверест?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 5,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.997Z",
+    "update_timestamp": "2022-06-24T21:55:08.410Z",
+    "exam": 1,
+    "order_num": 5,
+    "text": "В каких месяцах Эйфелева башня более высокая?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 6,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.997Z",
+    "update_timestamp": "2022-06-23T20:16:30.703Z",
+    "exam": 1,
+    "order_num": 6,
+    "text": "Что было предложено Альберту Эйнштейну в 1952 году?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 7,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:14:03.998Z",
+    "update_timestamp": "2022-06-23T20:15:26.759Z",
+    "exam": 1,
+    "order_num": 7,
+    "text": "Почему у котов вертикальные зрачки?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 8,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.831Z",
+    "update_timestamp": "2022-06-23T20:50:39.291Z",
+    "exam": 2,
+    "order_num": 1,
+    "text": "Какой стадии жизни звезды не существует?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 9,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.831Z",
+    "update_timestamp": "2022-06-23T20:49:44.566Z",
+    "exam": 2,
+    "order_num": 2,
+    "text": "Какая из этих планет находится ближе всех к Солнцу?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 10,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.832Z",
+    "update_timestamp": "2022-06-23T20:49:03.675Z",
+    "exam": 2,
+    "order_num": 3,
+    "text": "Какая мера расстояния используется в астрономии?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 11,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.832Z",
+    "update_timestamp": "2022-06-23T20:44:06.923Z",
+    "exam": 2,
+    "order_num": 4,
+    "text": "Какая из этих планет не является газовым гигантом?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 12,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.832Z",
+    "update_timestamp": "2022-06-23T20:43:30.289Z",
+    "exam": 2,
+    "order_num": 5,
+    "text": "В состав какого созвездия входит Полярная звезда?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 13,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.833Z",
+    "update_timestamp": "2022-06-23T20:42:28.654Z",
+    "exam": 2,
+    "order_num": 6,
+    "text": "Какую планету солнечной системы в 2006 году лишили статуса планеты и стали считать карликовой планетой?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 14,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.833Z",
+    "update_timestamp": "2022-06-23T20:41:16.735Z",
+    "exam": 2,
+    "order_num": 7,
+    "text": "Назовите ближайшую к нам звезду, не считая Солнца",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 15,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.833Z",
+    "update_timestamp": "2022-06-23T20:40:29.376Z",
+    "exam": 2,
+    "order_num": 8,
+    "text": "Какая планета солнечной системы является единственной не названной в честь божества?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 16,
+  "fields": {
+    "create_timestamp": "2022-06-23T20:38:38.834Z",
+    "update_timestamp": "2022-06-23T20:39:52.169Z",
+    "exam": 2,
+    "order_num": 9,
+    "text": "Какая планета является самой крупной в Солнечной системе?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 18,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.546Z",
+    "update_timestamp": "2022-06-24T21:42:19.331Z",
+    "exam": 3,
+    "order_num": 1,
+    "text": "Сколько континентов на земном шаре?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 19,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.546Z",
+    "update_timestamp": "2022-06-24T21:45:17.570Z",
+    "exam": 3,
+    "order_num": 2,
+    "text": "Какая из этих стран самая большая?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 20,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.547Z",
+    "update_timestamp": "2022-06-24T21:46:05.343Z",
+    "exam": 3,
+    "order_num": 3,
+    "text": "Какой самый большой город в Европе?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 21,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.547Z",
+    "update_timestamp": "2022-06-24T21:48:26.143Z",
+    "exam": 3,
+    "order_num": 4,
+    "text": "Какие две сухопутные массы формируют Австралию?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 22,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.547Z",
+    "update_timestamp": "2022-06-24T21:49:22.993Z",
+    "exam": 3,
+    "order_num": 5,
+    "text": "Какая самая маленькая страна в мире?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 23,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.548Z",
+    "update_timestamp": "2022-06-24T21:50:10.784Z",
+    "exam": 3,
+    "order_num": 6,
+    "text": "Какой самый большой город в Северной Америке?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 24,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.548Z",
+    "update_timestamp": "2022-06-24T21:54:04.825Z",
+    "exam": 3,
+    "order_num": 7,
+    "text": "Какая самая низкая точка в Северной Америке?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 25,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.548Z",
+    "update_timestamp": "2022-06-24T21:41:29.494Z",
+    "exam": 3,
+    "order_num": 8,
+    "text": "Какая страна с большинством соседей?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 26,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.548Z",
+    "update_timestamp": "2022-06-24T21:40:53.768Z",
+    "exam": 3,
+    "order_num": 9,
+    "text": "Какая столица Австралии?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.question",
+  "pk": 27,
+  "fields": {
+    "create_timestamp": "2022-06-24T21:37:55.549Z",
+    "update_timestamp": "2022-06-24T21:39:40.764Z",
+    "exam": 3,
+    "order_num": 10,
+    "text": "На территории какого современного государства находятся руины Вавилона?",
+    "image": ""
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 1,
+  "fields": {
+    "question": 7,
+    "text": "Чтоб иметь более острое зрение",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 2,
+  "fields": {
+    "question": 7,
+    "text": "Чтоб лучше видеть в темноте",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 3,
+  "fields": {
+    "question": 7,
+    "text": "Чтоб быть более привлекательными",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 4,
+  "fields": {
+    "question": 7,
+    "text": "Это бесполезная мутация",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 5,
+  "fields": {
+    "question": 6,
+    "text": "стать президентом Израиля",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 6,
+  "fields": {
+    "question": 6,
+    "text": "полететь в космос",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 7,
+  "fields": {
+    "question": 6,
+    "text": "функция вице-короля Швеци",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 8,
+  "fields": {
+    "question": 6,
+    "text": "клонирование",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 9,
+  "fields": {
+    "question": 5,
+    "text": "июль-август",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 10,
+  "fields": {
+    "question": 5,
+    "text": "март-апрель",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 11,
+  "fields": {
+    "question": 5,
+    "text": "декабрь-январь",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 12,
+  "fields": {
+    "question": 5,
+    "text": "без разницы",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 13,
+  "fields": {
+    "question": 4,
+    "text": "101,4°C",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 14,
+  "fields": {
+    "question": 4,
+    "text": "68°C",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 15,
+  "fields": {
+    "question": 4,
+    "text": "100°C",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 16,
+  "fields": {
+    "question": 4,
+    "text": "98,6°C",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 17,
+  "fields": {
+    "question": 3,
+    "text": "один",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 18,
+  "fields": {
+    "question": 3,
+    "text": "два",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 19,
+  "fields": {
+    "question": 3,
+    "text": "три",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 20,
+  "fields": {
+    "question": 3,
+    "text": "четыре",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 21,
+  "fields": {
+    "question": 2,
+    "text": "в сидении",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 22,
+  "fields": {
+    "question": 2,
+    "text": "в руле",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 23,
+  "fields": {
+    "question": 2,
+    "text": "в педалях",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 24,
+  "fields": {
+    "question": 2,
+    "text": "в заднем переключателе",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 25,
+  "fields": {
+    "question": 1,
+    "text": "Галилео Галилей",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 26,
+  "fields": {
+    "question": 1,
+    "text": "Андерс Цельсий",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 27,
+  "fields": {
+    "question": 1,
+    "text": "Даниель Габриель Фаренгейт",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 28,
+  "fields": {
+    "question": 1,
+    "text": "Уильям Кельвин",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 29,
+  "fields": {
+    "question": 16,
+    "text": "Юпитер",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 30,
+  "fields": {
+    "question": 16,
+    "text": "Марс",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 31,
+  "fields": {
+    "question": 16,
+    "text": "Сатурн",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 32,
+  "fields": {
+    "question": 16,
+    "text": "Земля",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 33,
+  "fields": {
+    "question": 15,
+    "text": "Сатурн",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 34,
+  "fields": {
+    "question": 15,
+    "text": "Уран",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 35,
+  "fields": {
+    "question": 15,
+    "text": "Меркурий",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 36,
+  "fields": {
+    "question": 15,
+    "text": "Земля",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 37,
+  "fields": {
+    "question": 14,
+    "text": "Альдебаран",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 38,
+  "fields": {
+    "question": 14,
+    "text": "Проксима Центавра",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 39,
+  "fields": {
+    "question": 14,
+    "text": "Полярная",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 40,
+  "fields": {
+    "question": 14,
+    "text": "Сириус",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 41,
+  "fields": {
+    "question": 13,
+    "text": "Меркурий",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 42,
+  "fields": {
+    "question": 13,
+    "text": "Марс",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 43,
+  "fields": {
+    "question": 13,
+    "text": "Плутон",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 44,
+  "fields": {
+    "question": 13,
+    "text": "Уран",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 45,
+  "fields": {
+    "question": 12,
+    "text": "Лебедь",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 46,
+  "fields": {
+    "question": 12,
+    "text": "Большая Медведица",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 47,
+  "fields": {
+    "question": 12,
+    "text": "Альтаир",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 48,
+  "fields": {
+    "question": 12,
+    "text": "Малая Медведица",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 49,
+  "fields": {
+    "question": 11,
+    "text": "Юпитер",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 50,
+  "fields": {
+    "question": 11,
+    "text": "Венера",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 51,
+  "fields": {
+    "question": 11,
+    "text": "Нептун",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 52,
+  "fields": {
+    "question": 11,
+    "text": "Сатурн",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 53,
+  "fields": {
+    "question": 10,
+    "text": "Световой аршин",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 54,
+  "fields": {
+    "question": 10,
+    "text": "Световой год",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 55,
+  "fields": {
+    "question": 10,
+    "text": "Световой век",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 56,
+  "fields": {
+    "question": 10,
+    "text": "Световой узел",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 57,
+  "fields": {
+    "question": 9,
+    "text": "Юпитер",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 58,
+  "fields": {
+    "question": 9,
+    "text": "Марс",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 59,
+  "fields": {
+    "question": 9,
+    "text": "Венера",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 60,
+  "fields": {
+    "question": 9,
+    "text": "Меркурий",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 61,
+  "fields": {
+    "question": 8,
+    "text": "Белый карлик",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 62,
+  "fields": {
+    "question": 8,
+    "text": "Касный гигант",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 63,
+  "fields": {
+    "question": 8,
+    "text": "Зелёный великан",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 64,
+  "fields": {
+    "question": 8,
+    "text": "Чёрная дыра",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 65,
+  "fields": {
+    "question": 27,
+    "text": "Ирак",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 66,
+  "fields": {
+    "question": 27,
+    "text": "Иран",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 67,
+  "fields": {
+    "question": 27,
+    "text": "Пакистан",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 68,
+  "fields": {
+    "question": 27,
+    "text": "Саудовская Аравия",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 69,
+  "fields": {
+    "question": 26,
+    "text": "Мельбурн",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 70,
+  "fields": {
+    "question": 26,
+    "text": "Сидней",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 71,
+  "fields": {
+    "question": 26,
+    "text": "Канберра",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 72,
+  "fields": {
+    "question": 26,
+    "text": "Брисбен",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 73,
+  "fields": {
+    "question": 25,
+    "text": "Китай",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 74,
+  "fields": {
+    "question": 25,
+    "text": "США",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 75,
+  "fields": {
+    "question": 25,
+    "text": "Бразилия",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 76,
+  "fields": {
+    "question": 25,
+    "text": "Россия",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 77,
+  "fields": {
+    "question": 18,
+    "text": "5",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 78,
+  "fields": {
+    "question": 18,
+    "text": "6",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 79,
+  "fields": {
+    "question": 18,
+    "text": "7",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 80,
+  "fields": {
+    "question": 18,
+    "text": "8",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 81,
+  "fields": {
+    "question": 19,
+    "text": "Канада",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 82,
+  "fields": {
+    "question": 19,
+    "text": "Китай",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 83,
+  "fields": {
+    "question": 19,
+    "text": "Бразилия",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 84,
+  "fields": {
+    "question": 19,
+    "text": "США",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 85,
+  "fields": {
+    "question": 20,
+    "text": "Москва",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 86,
+  "fields": {
+    "question": 20,
+    "text": "Стамбул",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 87,
+  "fields": {
+    "question": 20,
+    "text": "Париж",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 88,
+  "fields": {
+    "question": 20,
+    "text": "Лондон",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 89,
+  "fields": {
+    "question": 21,
+    "text": "Материк Австралия и Новая Зенландия",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 90,
+  "fields": {
+    "question": 21,
+    "text": "Материк Австралия и Тасмания",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 91,
+  "fields": {
+    "question": 21,
+    "text": "Материк Австралия и Танзания",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 92,
+  "fields": {
+    "question": 21,
+    "text": "Материк Австралия и Папуа Новая Гвинея",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 93,
+  "fields": {
+    "question": 22,
+    "text": "Сан Марино",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 94,
+  "fields": {
+    "question": 22,
+    "text": "Люксембург",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 95,
+  "fields": {
+    "question": 22,
+    "text": "Ватикан",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 96,
+  "fields": {
+    "question": 22,
+    "text": "Монако",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 97,
+  "fields": {
+    "question": 23,
+    "text": "Лос Анджелес",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 98,
+  "fields": {
+    "question": 23,
+    "text": "Нью Йорк",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 99,
+  "fields": {
+    "question": 23,
+    "text": "Оттава",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 100,
+  "fields": {
+    "question": 23,
+    "text": "Мехико",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 101,
+  "fields": {
+    "question": 24,
+    "text": "Печной ручей",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 102,
+  "fields": {
+    "question": 24,
+    "text": "Солтон-си",
+    "is_correct": false
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 103,
+  "fields": {
+    "question": 24,
+    "text": "Долина смерти",
+    "is_correct": true
+  }
+},
+{
+  "model": "quiz.choice",
+  "pk": 104,
+  "fields": {
+    "question": 24,
+    "text": "Озеро Салада",
+    "is_correct": false
+  }
+}
+]

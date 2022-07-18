@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Описание теста
+{% endblock %}
+
+{% block header %}
+    Тест: {{ exam.title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Описание</td>
+                            <td>{{ exam.description }}</td>
+                        </tr>
+                        <tr>
+                            <td>Кол-во вопросов</td>
+{#                            <td>{{ exam.questions.count }}</td>#}
+                            <td>{{ exam.questions_count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Кол-во запусков</td>
+                            <td>{{ exam.results.count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Лучший результат</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Кто получил лучший результат</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <td>Последний запуск</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+              </table>
+            </div>
+        </div>
+        <div class="row">
+            <form method="post"
+                  class="d-flex justify-content-center mt-5 mb-2"
+                  action="{% url 'quiz:result_create' exam.uuid %}">
+                {% csrf_token %}
+                <input class="btn btn-success m-3" type="submit" value="START">
+                <a class="btn btn-primary m-3" href="{% url 'quiz:list' %}">Вернуться к списку тестов</a>
+            </form>
+        </div>
+        {% if object_list %}
+            <table class="table table-striped table-hover">
+                <tr>
+                    <th></th>
+                    <th>Дата старта</th>
+                    <th>Баллы</th>
+                    <th>Статус</th>
+                    <th>Действие</th>
+                </tr>
+                {% for result in object_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ result.create_timestamp|date:'d-m-Y H:i' }}</td>
+                    <td>{{ result.points }}</td>
+                    <td>{{ result.get_state_display }}</td>
+                    <td>
+                        {% if result.state == result.STATE.NEW %}
+                            <a class="btn btn-warning" href="{% url 'quiz:result_update' exam.uuid result.uuid %}">
+                                Продолжить
+                            </a>
+                            <a class="btn btn-danger" href="#">
+                                Удалить
+                            </a>
+                        {% else %}
+                            <a class="btn btn-success" href="{% url 'quiz:result_details' exam.uuid result.uuid %}">
+                                Посмотреть
+                            </a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% if is_paginated %}
+                <div class="p-1 m-1">
+                    {% include 'includes/pagination.html' %}
+                </div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

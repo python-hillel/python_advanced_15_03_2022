@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Index page
+{% endblock %}
+
+{% block header %}
+    Главная страница
+{% endblock %}
+
+{% block content %}
+    <h4>perms.quiz.add_result: {{ perms.quiz.add_result }}</h4>
+    <h4>perms.quiz.view_result: {{ perms.quiz.view_result }}</h4>
+    <h4>perms.quiz.change_result: {{ perms.quiz.change_result }}</h4>
+    <h4>perms.quiz.delete_result: {{ perms.quiz.delete_result }}</h4>
+    <h4>perms.accounts.view_statistics: {{ perms.accounts.view_statistics }}</h4>
+{% endblock %}
+
+
+{# perms.<app_name>.<perm>_<model>  #}
